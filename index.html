@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<head>
+  <title>NoodleyOSC</title>
+</head>
+
+<body>
+  <div class= "logoTexto">NoodleyOSC</div>
+  <div class= "desc">Contenido random desde 2022</div>
+  <img class= "logoImg" src= "assets/images/holy-yoylecakes.png" alt= "logoxdxd">
+  <div class= "textodeabajodellogo">Mis proyectos</div>
+  <button class= "botonFNF" onClick= "fnf()">Mods de FNF</button>
+  <button class= "botonGD" onClick= "gd()">Niveles de GD</button>
+  <button class= "botonMas" onClick= "mas()">Más</button>
+  <div>hola soy un texto<br>
+como q esto ta medio vacio no?</div>
+
+  <a class= "vspan" id= "vspan" href= "https://noodleyosc.itch.io/fnf-vs-pan">fnf vs pan</a>
+  <img class= "panimg" id = "panimg" src= "assets/images/pan.png" alt= "pan">
+
+  <a class= "leveleasyplus" id = "leveleasyplus" href= "https://gdbrowser.com/141158220" style= "display: none">Level Easy Plus</a>
+  <div class= "gdID1" id = "gdID1" onClick= "copyGDid1()" style= "display: none">Copiar ID</div>
+
+  <a class= "gdps" id= "gdps" href= "gdps.html" style= "display: none">FideoDash GDPS</a>
+
+<script>
+function gd() {
+    document.getElementById("vspan").style.display = "none";
+    document.getElementById("panimg").style.display = "none";
+
+    document.getElementById("gdps").style.display = "none";
+
+    document.getElementById("leveleasyplus").style.display = "block";
+    document.getElementById("gdID1").style.display = "block";
+}
+</script>
+
+<script>
+function fnf() {
+    document.getElementById("vspan").style.display = "block";
+    document.getElementById("panimg").style.display = "block";
+
+    document.getElementById("leveleasyplus").style.display = "none";
+    document.getElementById("gdID1").style.display = "none";
+
+    document.getElementById("gdps").style.display = "none";
+}
+</script>
+
+<script>
+function mas() {
+    document.getElementById("vspan").style.display = "none";
+    document.getElementById("panimg").style.display = "none";
+
+    document.getElementById("leveleasyplus").style.display = "none";
+    document.getElementById("gdID1").style.display = "none";
+
+    document.getElementById("gdps").style.display = "block";
+}
+</script>
+<script>
+function copyGDid1() {
+    navigator.clipboard.writeText("141158220");
+
+    let texto = document.getElementById("gdID1");
+
+    texto.innerText = "¡Copiado!";
+    texto.style.color = "green";
+
+    setTimeout(function() {
+        texto.innerText = "Copiar ID";
+        texto.style.color = "black";
+    }, 2000);
+}
+</script>
+</body>
+
+<style>
+  body {
+    background-image: url("assets/images/gradient.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  @font-face {
+	  font-family: "Shag-Lounge";
+	  src: url("assets/fonts/shag-lounge.ttf")
+	}
+
+  @font-face {
+	  font-family: "VCR-OSD-Mono";
+	  src: url("assets/fonts/vcr.ttf")
+	}
+
+  @font-face {
+	  font-family: "Pusab";
+	  src: url("assets/fonts/HOLYGDREFERENCE.otf")
+	}
+
+  .logoTexto {
+	  position: absolute;
+	  left: 1100px;
+	  top: 200px;
+
+	  font-size: 100px;
+	  font-family: Shag-Lounge, sans-serif
+
+	}
+
+  .logoImg {
+	  position: absolute;
+	  left: 700px;
+	  top: 120px;
+	  width: 372px;
+	  height: 253px;
+	}
+
+    .desc {
+	  position: absolute;
+	  left: 740px;
+	  top: 400px;
+
+	  font-size: 30px;
+	  font-family: Shag-Lounge, sans-serif
+
+	}
+
+    .textodeabajodellogo {
+	  position: absolute;
+	  left: 960px;
+	  top: 600px;
+
+	  font-size: 50px;
+	  font-family: Shag-Lounge, sans-serif;
+
+	}
+
+  .botonFNF {
+	  position: absolute;
+	  left: 660px;
+	  top: 750px;
+
+	  background-color: gray;
+	  width: 230px;
+	  height: 80px;
+	  border-radius: 20px;
+
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  font-size: 20px;
+	  font-family: VCR-OSD-Mono, sans-serif;
+
+	  cursor: pointer;
+	}
+
+  .botonGD {
+	  position: absolute;
+	  left: 1000px;
+	  top: 750px;
+
+	  background-color: gray;
+	  width: 230px;
+	  height: 80px;
+	  border-radius: 20px;
+
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  font-size: 20px;
+	  font-family: Pusab, sans-serif;
+
+	  cursor: pointer;
+	}
+
+
+  .botonMas {
+	  position: absolute;
+	  left: 1340px;
+	  top: 750px;
+
+	  background-color: gray;
+	  width: 230px;
+	  height: 80px;
+	  border-radius: 20px;
+
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  font-size: 20px;
+	  font-family: Shag-Lounge, sans-serif;
+
+	  cursor: pointer;
+	}
+
+  .vspan {
+	  position: absolute;
+	  left: 660px;
+	  top: 900px;
+	  font-size: 20px;
+	  font-family: VCR-OSD-Mono, sans-serif;
+
+	  cursor: pointer;
+	}
+
+  .panimg {
+	  position: absolute;
+	  left: 580px;
+	  top: 890px;
+	  width: 50px;
+	  height: 50px;
+	}
+
+  .leveleasyplus {
+	  position: absolute;
+	  left: 900px;
+	  top: 900px;
+	  font-size: 40px;
+	  font-family: Pusab, sans-serif;
+
+	  cursor: pointer;
+	}
+
+  .gdID1 {
+	  position: absolute;
+	  left: 1030px;
+	  top: 950px;
+	  font-size: 20px;
+	  font-family: Pusab, sans-serif;
+
+	  cursor: pointer;
+	}
+
+  .gdps {
+	  position: absolute;
+	  left: 900px;
+	  top: 900px;
+	  font-size: 40px;
+	  font-family: Pusab, sans-serif;
+
+	  cursor: pointer;
+	}
+</style>
